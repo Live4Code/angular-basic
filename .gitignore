@@ -8,3 +8,4 @@ tmp
 bower_components/
 test_out/
 test_e2e/
+*cm-movie*
