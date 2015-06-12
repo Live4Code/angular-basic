@@ -1,7 +1,7 @@
 'use strict';
 
 /* jasmine specs for controllers go here */
-describe('Angular controllers', function() {
+describe('main.js', function() {
 
   describe('MainCtrl', function(){
     beforeEach(module('myApp'));
@@ -13,7 +13,7 @@ describe('Angular controllers', function() {
       ctrl = $controller('MainCtrl', {$scope: scope});
     }));
 
-    it('should has right scope data', function() {
+    it('scope.data should contain character, language and acronym. They should have correct values.', function() {
       expect(scope.data.character).toEqual('Superheroic');
       expect(scope.data.language).toEqual('Javascript');
       expect(scope.data.acronym).toEqual('MVW');
