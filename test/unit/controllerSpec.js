@@ -1,7 +1,7 @@
 'use strict';
 
 /* jasmine specs for controllers go here */
-describe('Angular controllers', function() {
+describe('Share data', function() {
 
   describe('FirstCtrl', function(){
     beforeEach(module('myApp'));
@@ -13,7 +13,7 @@ describe('Angular controllers', function() {
       ctrl = $controller('FirstCtrl', {$scope: scope});
     }));
 
-    it('should has right scope data', function() {
+    it('should has $scope.todo, and is from DataStore', function() {
       expect(scope.todo).toEqual('Learn AngularJS');
     });
   });
@@ -28,7 +28,7 @@ describe('Angular controllers', function() {
       ctrl = $controller('SecondCtrl', {$scope: scope});
     }));
 
-    it('should has right scope data', function() {
+    it('should has $scope.todo, and is from DataStore', function() {
       expect(scope.todo).toEqual('Learn AngularJS');
     });
   });
