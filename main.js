@@ -15,9 +15,9 @@ myApp.factory('DataStore', function() {
 
   return {
     'getMessage': getMessage,
-    'setMessage': setMessage,
+    'setMessage': setMessage
   }; 
-})
+});
 
 function FirstCtrl($scope, DataStore){
 
