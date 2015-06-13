@@ -2,7 +2,7 @@ var myApp = angular.module('myApp', []);
 
 myApp.factory('DataStore', function() {
   var dataToShare = {
-    message: "rats live on no evil star", 
+    message: "time" 
   };
 
   var setMessage = function(message){
@@ -11,12 +11,12 @@ myApp.factory('DataStore', function() {
 
   var getMessage = function(){
     return dataToShare.message;
-  }
+  };
 
   return {
     'getMessage': getMessage,
     'setMessage': setMessage,
-  } 
+  }; 
 })
 
 function FirstCtrl($scope, DataStore){
@@ -24,7 +24,7 @@ function FirstCtrl($scope, DataStore){
   $scope.message = DataStore.getMessage();
 
   $scope.saveMessage = function(){
-    //调用工厂中setMessage方法来保存更新的message
+    //Use setMessage in DataStore to save message
 
   };
 
@@ -39,7 +39,7 @@ function SecondCtrl($scope, DataStore){
   };
 
   $scope.fetchMessage = function(){
-    //调用工厂中getMessage方法来获取更新过的message
+    //Use getMessage to fetch updated message
 
   };
 

@@ -15,16 +15,16 @@
 
       <div class="well first" ng-controller="FirstCtrl">
         <p>
-          <strong>FirstCtrl 控制的页面区域</strong>
+          <strong>FirstCtrl</strong>
         </p>
         <p>
           <input type="text" class="form-control" ng-model="message">
         </p>
         <p class="message">
-          从DataStore获得message: {{message}}
+          From DataStore: {{message}}
         </p>
         <p>
-          <button class="btn btn-primary" ng-click="saveMessage()">更新message变量</button>
+          <button class="btn btn-primary" ng-click="saveMessage()">Update message</button>
         </p>
       </div>
 
@@ -32,19 +32,19 @@
 
       <div class="well second" ng-controller="SecondCtrl">
         <p>
-          <strong>SecondCtrl 控制的页面区域</strong>
+          <strong>SecondCtrl</strong>
         </p>
         <p>
           <input type="text" class="form-control" ng-model="message">
         </p>
         <p class="message">
-          从DataStore获得message: {{message}}
+          From DataStore: {{message}}
         </p>
         <p class="reverse-message">
-          倒序的message是： {{reversedMessage(message)}}
+          Reversed message： {{reversedMessage(message)}}
         </p>
         <p>
-          <button class="btn btn-primary" ng-click="fetchMessage()">获取更新的message变量</button>
+          <button class="btn btn-primary" ng-click="fetchMessage()">Fetch updated message</button>
         </p>
         </div>
 
