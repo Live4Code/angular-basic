@@ -2,7 +2,7 @@ var myApp = angular.module('myApp', []);
 
 myApp.factory('DataStore', function() {
   var dataToShare = {
-    message: "Use service to share data between controllers", 
+    message: 'Use service to share data between controllers', 
     //todo
     todo: 'Learn AngularJS'
   };
