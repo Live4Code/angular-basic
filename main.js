@@ -8,7 +8,7 @@ myApp.factory('DataStore', function() {
   };
 
   return dataToShare;
-})
+});
 
 myApp.controller('FirstCtrl',function($scope, DataStore){
 
