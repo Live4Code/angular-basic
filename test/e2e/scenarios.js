@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Angular Controller', function() {
+describe('Controller methods', function() {
 
   describe('index page', function() {
 
@@ -8,7 +8,7 @@ describe('Angular Controller', function() {
       browser.get('index.html');
     });
 
-    it('should filter the phone list as user types into the search box', function() {
+    it('ng-click methods', function() {
       var firstInput = element(by.css('.first input'));
       firstInput.clear();
       firstInput.sendKeys('87654321');
@@ -16,8 +16,8 @@ describe('Angular Controller', function() {
       element(by.css('.second .btn-primary')).click();
       var secondMsg = element(by.css('.second .message'));
       var secondRMsg = element(by.css('.second .reverse-message'));
-      expect(secondMsg.getText()).toBe('从DataStore获得message: 87654321');
-      expect(secondRMsg.getText()).toBe('倒序的message是： 12345678');
+      expect(secondMsg.getText()).toBe('From DataStore: 87654321', 'If input in FirstCtrl is 87654321, the message in SecondCtrl also should be 87654321');
+      expect(secondRMsg.getText()).toBe('Reversed message：12345678', 'Now the reversed message should be 12345678');
     });
 
   });
