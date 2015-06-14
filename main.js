@@ -33,7 +33,7 @@ myApp.factory('Avengers', function() {
     }
   ];
   return Avengers;
-})
+});
 
 function SuperherosCtrl($scope, Avengers) {
   $scope.avengers = Avengers;
