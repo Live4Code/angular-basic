@@ -13,8 +13,8 @@ myApp.filter('myReverse',function(){
       out = out.toUpperCase();
     }
     return out;    
-  }
-})
+  };
+});
 
 //Shift characters in a string to the right by a specific number of times. 
 //e.g.{{ 'abcd' | shiftString:2 }} -> 'cdab'
