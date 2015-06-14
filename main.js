@@ -46,7 +46,7 @@ function MainCtrl($scope, DataStore){
 
 myApp.factory('DataStore', function() {
   var dataToShare = {
-    message: "rats live on no evil star" 
+    message: "time" 
   };
 
   var setMessage = function(message){
