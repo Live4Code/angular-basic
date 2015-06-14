@@ -1,8 +1,8 @@
 var myApp = angular.module('myApp', []);
 
 myApp.filter('myReverse',function(){
-  //input是过滤器作用的对象，uppercase是传入的参数
-  //比如{{ message | myReverse:true }}，input是message,uppercase是true
+  //input is the data to be filtered，uppercase is an additional parameter passed in from view
+  //e.g. {{ message | myReverse:true }}，input is message, uppercase is true
   return function(input, uppercase){
     var out = "";
     for (var i = 0; i < input.length; i++) {
@@ -16,23 +16,23 @@ myApp.filter('myReverse',function(){
   }
 })
 
-//给定字符串并传入要移动的位数，过滤器将字符串每一位右移指定的位数，最末位补到最前。
-//比如{{ 'abcd' | shiftString:2 }} -> 'cdab'
+//Shift characters in a string to the right by a specific number of times. 
+//e.g.{{ 'abcd' | shiftString:2 }} -> 'cdab'
 myApp.filter('shiftString',function(){
   return function(input, numberToShift){
-    //首先取numberToShift对input.length的余数
+    //first find the mod of numberToShift on input
     numberToShift = numberToShift%input.length;
-    //使用数组储存新的字符串中的字符
+    //create a new character array to save the result
     var letters = new Array(input.length);
     for (var i = 0; i < input.length; i++) {
-      //依照规则遍历字符串并存在letters的相对应的位置
+      //compute the new position for each character based on the rule
 
 
     }
-    //将改造好的数组转换成字符串输出  
+    //join the character array to return a string
     return letters.join('');    
-  }  
-})
+  };  
+});
 
 function MainCtrl($scope, DataStore){
 
@@ -55,10 +55,10 @@ myApp.factory('DataStore', function() {
 
   var getMessage = function(){
     return dataToShare.message;
-  }
+  };
 
   return {
     'getMessage': getMessage,
-    'setMessage': setMessage,
-  } 
-})
+    'setMessage': setMessage
+  }; 
+});

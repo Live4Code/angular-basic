@@ -17,16 +17,16 @@
           <input type="text" class="form-control" ng-model="message">
         </p>
         <p>
-          从DataStore获得message: {{message}}
+          From DataStore: {{message}}
         </p>
         <p>
-          倒序的message是： {{reversedMessage(message)}}
+          Reversed Message: {{reversedMessage(message)}}
         </p>
         <p>
-          使用myReverse过滤器倒序并转换uppercase： {{ message | myReverse:true }}
+          Use myReverse filter: {{ message | myReverse:true }}
         </p>
         <p>
-          使用shiftString过滤器来移动message: {{ message | shiftString:3 }}
+          Use shiftString filter: {{ message | shiftString:3 }}
         </p>
       </div>
     </div>
