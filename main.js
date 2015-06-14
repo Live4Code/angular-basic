@@ -22,10 +22,11 @@ myApp.filter('shiftString',function(){
   return function(input, numberToShift){
     //first find the mod of numberToShift on input
     numberToShift = numberToShift%input.length;
-    //create a new character array to save the result
+    //create a new character array to hold the result
     var letters = new Array(input.length);
     for (var i = 0; i < input.length; i++) {
       //compute the new position for each character based on the rule
+      //save the character to the new position in letters
 
 
     }
