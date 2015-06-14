@@ -18,4 +18,4 @@ For example, you may track items by the index of each item in the collection, us
 <div ng-repeat="n in [42, 42, 43, 43] track by $index">
   {{n}}
 </div>
-``
+```
