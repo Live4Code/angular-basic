@@ -22,11 +22,13 @@
   <table class="table table-bordered table-striped">
     <tr>
       <!-- add changing reverse in ng-click to change order direction -->
-      <th><a class="name" href="" ng-click="attr = 'name';   ">Actor</a></th>
-      <th><a class="character" href="" ng-click="attr = 'character';">Character</a></th>
+      <th><a class="name" ng-click="attr='name';   ">Actor</a></th>
+      <th><a class="character" ng-click="attr='character';   ">Character</a></th>
     </tr>
     <!-- add reverse filter to orderBy to change order direction -->
-    <tr ng-repeat="actor in avengers.cast | filter:search | orderBy:attr   | limitTo: limit">
+    <tr ng-repeat="actor in avengers.cast | filter:search | 
+      orderBy:attr   | limitTo: limit">
+      
       <td>{{actor.name | uppercase}}</td>
       <td>{{actor.character | lowercase}}</td>
     </tr>
