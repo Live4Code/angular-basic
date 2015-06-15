@@ -11,33 +11,36 @@
     <script type="text/javascript" src="main.js"></script>
   </head>
   <body>
-    <div class="container" style="margin-top: 60px;">
+  <div class="container" style="margin-top: 60px;">
 
-      <div ng-controller="SuperherosCtrl">
-        <label>Search actors or characters</label><input type="text" ng-model="search">
-        <label>Size</label><input type="number" ng-model="limit">
-        <label>Reverse ordering</label><input type="checkbox" ng-model="reverse">
-        <table class="table table-bordered table-striped">
-          <tr>
-            <!-- add changing reverse in ng-click to change order direction -->
-            <th><a class="name" href="" ng-click="attr = 'name';   ">Actor</a></th>
-            <th><a class="character" href="" ng-click="attr = 'character';">Character</a></th>
-          </tr>
-          <!-- add reverse filter to orderBy to change order direction -->
-          <tr ng-repeat="actor in avengers.cast | filter:search | orderBy:attr   | limitTo: limit">
-            <td>{{actor.name | uppercase}}</td>
-            <td>{{actor.character | lowercase}}</td>
-          </tr>
-        </table>
+  <div ng-controller="SuperherosCtrl">
+    <label>Search actors or characters</label><input type="text" ng-model="search">
+    <label>Size</label><input type="number" ng-model="limit">
+    <label>Reverse ordering</label><input type="checkbox" ng-model="reverse">
+    
+    <table class="table table-bordered table-striped">
+      <tr>
+        <!-- add changing reverse in ng-click to change order direction -->
+        <th><a class="name" href="" ng-click="attr = 'name';   ">Actor</a></th>
+        <th><a class="character" href="" ng-click="attr = 'character';">Character</a></th>
+      </tr>
+      <!-- add reverse filter to orderBy to change order direction -->
+      <tr ng-repeat="actor in avengers.cast | filter:search | orderBy:attr   | limitTo: limit">
+        <td>{{actor.name | uppercase}}</td>
+        <td>{{actor.character | lowercase}}</td>
+      </tr>
+    </table>
 
-        <div class="well">
-          <dl class="dl-horizontal">
-            <dt>Box office($)</dt><dd>{{boxOfficeInUS | currency}}</dd>
-            <dt>Release date</dt><dd>{{release | date:'short'}}</dd>
-            <dt>Rating</dt><dd>{{rating | number: 1}}</dd>
-          </dl>
-        </div>
-      </div>
+    <div class="well">
+      <dl class="dl-horizontal">
+        <dt>Box office($)</dt><dd>{{boxOfficeInUS | currency}}</dd>
+        <dt>Release date</dt><dd>{{release | date:'short'}}</dd>
+        <dt>Rating</dt><dd>{{rating | number: 1}}</dd>
+      </dl>
     </div>
+    
+  </div>
+    
+  </div>
   </body>
 </html>
