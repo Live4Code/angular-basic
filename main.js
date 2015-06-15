@@ -41,7 +41,6 @@ function SuperherosCtrl($scope, Avengers) {
     $scope.reverse = false;
 
     $scope.boxOfficeInUS = 220000000;
-    $scope.boxOfficeInCN = 1400000000;
 
     $scope.rating = 8.234;
 
