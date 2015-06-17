@@ -10,7 +10,7 @@ myApp.directive('pagination', function() {
       onSelectPage: '&'
     },
 
-    //习题：previous 改为 &laquo; 以及 next 改为 &raquo;
+    //Exercise: change 'previous' to '&laquo'; 'next' to '&raquo';
     template:
       '<div class="col-xs-offset-2"><ul class="pagination">' +
         '<li ng-class="{disabled: noPrevious()}"><a ng-click="selectPrevious()">previous</a></li>' +
@@ -21,7 +21,7 @@ myApp.directive('pagination', function() {
 
     replace: true,
 
-    //习题：增加跳到首页以及跳到尾页的方法
+    //Exercise: Add methods to jump to the first page and the last page
     link: function(scope) {
 
       scope.$watch('numPages', function(value) {
