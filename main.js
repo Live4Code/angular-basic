@@ -16,6 +16,9 @@ myApp.directive('button', function() {
       if ( attributes.size ) {
         element.addClass('btn-' + attributes.size);
       }
+      
+      
+      
     }
   };
 });
