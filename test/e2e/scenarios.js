@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Angular Pagination Directive', function() {
+describe('Pagination Directive', function() {
 
   describe('index page', function() {
 
@@ -8,7 +8,7 @@ describe('Angular Pagination Directive', function() {
       browser.get('index.html');
     });
 
-    it('should allow jump to first & last page', function() {
+    it('should jump to first & last pages', function() {
       var numPages = element(by.model('numPages'));
       numPages.clear();
       numPages.sendKeys('5');      
@@ -19,9 +19,9 @@ describe('Angular Pagination Directive', function() {
       var lastLi = element(by.css('.pagination')).element(by.css('li:nth-child(6)'));
 
       fisrtLink.click();
-      expect(fisrtLi.getAttribute('class')).toContain('active');
+      expect(fisrtLi.getAttribute('class')).toContain('active', 'click first link should go to the first page');
       lastLink.click();
-      expect(lastLi.getAttribute('class')).toContain('active');
+      expect(lastLi.getAttribute('class')).toContain('active', 'click last link should go to the last page');
 
     });
 
