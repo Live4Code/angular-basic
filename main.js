@@ -36,7 +36,7 @@ myApp.directive('panel', function(){
     transclude:true,
     scope:{
       type:'=',
-      title: '=',
+      title: '='
     }
   }
 });
