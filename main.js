@@ -31,7 +31,7 @@ myApp.directive('panel', function(){
         '</div>' +
         '<div class="panel-body">' +
           //add transclude here
-        '</div>'
+        '</div>' +
       '</div>',
     transclude:true,
     scope:{
