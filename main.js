@@ -17,18 +17,22 @@ myApp.directive('alert', function () {
   };
 });
 
-//根据alert指令的例子完成panel指令
-//template的内容在index.html中有说明
-//注意scope传入type和title
+//Finish the panel directive based on the example of alert directive
+//the template is provided in the index.html
+//notice scope has two variables: type and title
 myApp.directive('panel', function(){
   return {
     restrict:'EA',
     replace: true,
     template: 
-      //完成template的内容的构建
-      '',
-
- 
+      '<div class="panel panel-{{type}}">' +
+        '<div class="panel-heading">' +
+          '<h3 class="panel-title">{{title}}</h3>' +
+        '</div>' +
+        '<div class="panel-body">' +
+          //add transclude here
+        '</div>'
+      '</div>',
     transclude:true,
     scope:{
       type:'=',
@@ -39,17 +43,17 @@ myApp.directive('panel', function(){
 
 myApp.controller('AlertController', function ($scope) {
   $scope.alerts = [
-    { type: 'danger', msg: '系统遇到错误，以下是详细的错误信息。。。' }, 
-    { type: 'success', msg: '成功更新了您的资料' },
-    { type: 'info', msg: 'info 这里是详细的填写说明。。。'},
-    { type: 'warning', msg: '您的资料不完整，请仔细检查填写结果。'}
+    { type: 'danger', msg: 'This is an error message' }, 
+    { type: 'success', msg: 'This is a success message' },
+    { type: 'info', msg: 'This is a info message'},
+    { type: 'warning', msg: 'This is a warning message'}
   ];
 
-  //随机在$scope.alerts中选择alert并加到$scope.alerts的末尾
-  //双向绑定会自动更新页面
   $scope.addAlert = function() {
-
-
+    var alert = {type: '', msg: ''};
+    //randomly select one from $scope.alerts and assign it to the alert variable
+    
+    $scope.alerts.push({ type: alert.type, msg: alert.msg});
   };
 
   $scope.closeAlert = function(index) {
@@ -57,13 +61,14 @@ myApp.controller('AlertController', function ($scope) {
   };
 
   var panels = [
-    { type: 'danger', title: '错误', content: '系统遇到错误，以下是详细的错误信息。。。' }, 
-    { type: 'success', title: '成功', content: '成功更新了您的资料' },
-    { type: 'info', title: '信息', content: 'info 这里是详细的填写说明。。。'},
-    { type: 'warning', title: '警告' , content: '您的资料不完整，请仔细检查填写结果。'}
+    { type: 'danger', title: 'Error', content: 'This is a detailed error message' }, 
+    { type: 'success', title: 'Success', content: 'This is a detailed success message' },
+    { type: 'info', title: 'Info', content: 'This is a detailed info message'},
+    { type: 'warning', title: 'Warning' , content: 'This is a detailed warning message'}
   ];
 
-  //从panels中随机选择一个panel,并附值给$scope.panel
+  //randomly select one from panels and assign it to $scope.panel
+  //it is then rendered with the panel directive
   $scope.randomPanel = function(){
 
   };
