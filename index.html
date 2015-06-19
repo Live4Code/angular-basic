@@ -15,7 +15,9 @@
     
 <div class="row">
   <h3>Alert box</h3>
-  <alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
+  <alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">
+    {{alert.msg}}
+  </alert>
   <button class='btn btn-default add-alert' ng-click="addAlert()">Add random alert</button>
 </div>
 <div class="row">
