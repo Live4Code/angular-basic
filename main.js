@@ -38,7 +38,7 @@ myApp.directive('panel', function(){
       type:'=',
       title: '='
     }
-  }
+  };
 });
 
 myApp.controller('AlertController', function ($scope) {
