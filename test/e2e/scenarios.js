@@ -24,9 +24,8 @@ describe('Transclude', function() {
           var panelBody = element(by.css('.panel-body'));
           var panelContent = element(by.css('.panel-body div span'));
           expect(panel.isPresent()).toBe(true, 'click select panel button should display a random panel');
-          expect(panelHead.isPresent()).toBe(true);
-          expect(panelContent.getText()).toBeTruthy();
-          expect(panelBody.isPresent()).toBe(true);
+          expect(panelHead.isPresent()).toBe(true, 'click select panel button should display a random panel');
+          expect(panelBody.isPresent()).toBe(true, 'click select panel button should display a random panel');
         });
       });
     });
