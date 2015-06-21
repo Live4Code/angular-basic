@@ -1,7 +1,7 @@
 var myApp = angular.module('myApp', []);
 
 myApp.controller("AppCtrl", function($scope) {
-  $scope.callContent = function(number, network, message) {
+  $scope.callContent = function(message) {
     alert("Number: " + number + " Carrier: "+ 
       network + " Content: " + message);
   };
@@ -27,7 +27,7 @@ template: '<div class="panel panel-info">'+
   '<p>Content: '+
   '<input type="text" ng-model="value" class="form-control"></p>'+
   '<p><button class="btn btn-default" '+
-    'ng-click="makeCall({number: number, network:network, message: value})">'+
+    'ng-click="makeCall({message: value})">'+
   'Call</button></p>'+
   '</div></div>',
 
