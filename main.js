@@ -2,8 +2,8 @@ var myApp = angular.module('myApp', []);
 
 myApp.controller("AppCtrl", function($scope) {
   $scope.callContent = function(message) {
-    alert("Number: " + number + " Carrier: "+ 
-      network + " Content: " + message);
+    alert("Number: " + $scope.number + " Carrier: "+ 
+      $scope.network + " Content: " + message);
   };
 });
 
