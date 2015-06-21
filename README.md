@@ -17,7 +17,9 @@ called isolated scope.
 ### Different types of directive scopes
 
 `scope : false`. Directive uses its parent scope.
+
 `scope : true`. Directive gets a new scope, nothing is shared with parent controller.
+
 `scope : { }`. Directive gets a new isolated scope.
 
 ### Isolated Scope 
