@@ -21,8 +21,9 @@ scope: {
   
 template: '<div class="panel panel-info">'+
   '<div class="panel-heading">Dashboard</div>'+
-  '<div class="panel-body"><p>Number: {{number}}</p>'+
-  '<p>Carrier: '+
+  '<div class="panel-body"><p>Number: '+
+  '{{number}}'+
+  '</p><p>Carrier: '+
   '<select ng-model="network" ng-options="net for net in networks">'+
   '</select></p>'+
   '<p>Content: '+
